@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F781811C1AB1080E00FDE149 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781811B1AB1080E00FDE149 /* BasicViewController.swift */; };
 		F7E297D51AB104150023AB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E297D41AB104150023AB05 /* AppDelegate.swift */; };
 		F7E297D71AB104150023AB05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E297D61AB104150023AB05 /* ViewController.swift */; };
 		F7E297DA1AB104150023AB05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E297D81AB104150023AB05 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F781811B1AB1080E00FDE149 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicViewController.swift; path = ../BasicViewController.swift; sourceTree = "<group>"; };
 		F7E297CF1AB104150023AB05 /* animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E297D31AB104150023AB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E297D41AB104150023AB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		F7E297D11AB104150023AB05 /* animations */ = {
 			isa = PBXGroup;
 			children = (
+				F781811B1AB1080E00FDE149 /* BasicViewController.swift */,
 				F7E297D41AB104150023AB05 /* AppDelegate.swift */,
 				F7E297D61AB104150023AB05 /* ViewController.swift */,
 				F7E297D81AB104150023AB05 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7E297D71AB104150023AB05 /* ViewController.swift in Sources */,
+				F781811C1AB1080E00FDE149 /* BasicViewController.swift in Sources */,
 				F7E297D51AB104150023AB05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				F7E297F01AB104150023AB05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7E297F11AB104150023AB05 /* Build configuration list for PBXNativeTarget "animationsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				F7E297F31AB104150023AB05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

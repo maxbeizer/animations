@@ -75,33 +75,36 @@
             </objects>
             <point key="canvasLocation" x="1003" y="416"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic View Controller-->
         <scene sceneID="1ds-sU-oJ1">
             <objects>
-                <viewController id="vXb-xC-WyW" sceneMemberID="viewController">
+                <viewController id="vXb-xC-WyW" customClass="BasicViewController" customModule="animations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4WT-IU-Iz8"/>
-                        <viewControllerLayoutGuide type="bottom" id="4rf-Ea-BN7"/>
+                        <viewControllerLayoutGuide type="top" id="QXL-UN-2Zs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vva-td-fsE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Yv-rv-vJK">
+                    <view key="view" contentMode="scaleToFill" id="yR5-B1-iP6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwJ-uy-xlM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-G6-oQF">
                                 <rect key="frame" x="0.0" y="250" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="psW-x4-owj"/>
-                                    <constraint firstAttribute="width" constant="100" id="zct-Kn-wBf"/>
+                                    <constraint firstAttribute="width" constant="100" id="QRN-Cl-Jod"/>
+                                    <constraint firstAttribute="height" constant="100" id="wEE-qI-VOl"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="bwJ-uy-xlM" secondAttribute="centerY" id="aID-au-OnJ"/>
-                            <constraint firstItem="bwJ-uy-xlM" firstAttribute="leading" secondItem="5Yv-rv-vJK" secondAttribute="leadingMargin" constant="-16" id="w8u-vb-Kjh"/>
+                            <constraint firstAttribute="centerY" secondItem="Nke-G6-oQF" secondAttribute="centerY" id="DrM-AO-XSR"/>
+                            <constraint firstItem="Nke-G6-oQF" firstAttribute="leading" secondItem="yR5-B1-iP6" secondAttribute="leadingMargin" constant="-16" id="b63-NZ-HA7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="Nke-G6-oQF" id="EZG-IG-GFS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTl-Mz-FHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
