@@ -37,7 +37,9 @@ class BasicViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    startByValueAnimation()
+    let barButtonItem = UIBarButtonItem(title: "Start", style: UIBarButtonItemStyle.Bordered, target: self, action: "startByValueAnimation")
+    
+    navigationItem.rightBarButtonItem = barButtonItem
   }
   
   func startFromToAnimation() {
