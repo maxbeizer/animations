@@ -12,6 +12,16 @@ class MultiViewController: UIViewController {
 
   @IBOutlet weak var passwordTextField: UITextField!
   
+  let shakeAnimation:CAKeyframeAnimation = {
+    let animation = CAKeyframeAnimation()
+    animation.keyPath = "position.x"
+    animation.values = [0, 10, -10, 10, 0]
+    animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+    animation.duration = 0.4
+    animation.additive = true
+    return animation
+  }()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,13 +49,8 @@ class MultiViewController: UIViewController {
     */
 
   func startAnimation() {
-    let animation = CAKeyframeAnimation()
-    animation.keyPath = "position.x"
-    animation.values = [0, 10, -10, 10, 0]
-    animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
-    animation.duration = 0.4
-    animation.additive = true
-    
-    passwordTextField.layer.addAnimation(animation, forKey: "shake")
+    let slowAnimation = shakeAnimation.copy() as CAKeyframeAnimation
+    slowAnimation.duration = 2 // override the value of our abstracted motion
+    passwordTextField.layer.addAnimation(slowAnimation, forKey: "shake")
   }
 }
