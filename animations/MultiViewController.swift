@@ -27,7 +27,7 @@ class MultiViewController: UIViewController {
 
         // Do any additional setup after loading the view.
       
-      let barButtonItem = UIBarButtonItem(title: "Start", style: UIBarButtonItemStyle.Bordered, target: self, action: "startAnimation")
+      let barButtonItem = UIBarButtonItem(title: "Validate", style: UIBarButtonItemStyle.Bordered, target: self, action: "validatePassword")
       
       navigationItem.rightBarButtonItem = barButtonItem
     }
@@ -52,5 +52,22 @@ class MultiViewController: UIViewController {
     let slowAnimation = shakeAnimation.copy() as CAKeyframeAnimation
     slowAnimation.duration = 2 // override the value of our abstracted motion
     passwordTextField.layer.addAnimation(slowAnimation, forKey: "shake")
+  }
+  
+  func validatePassword() {
+    if passwordTextField.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) < 6 {
+      startAnimation()
+    }
+    else {
+      let alertController = UIAlertController(title: "Awesome!", message: "so valid", preferredStyle: UIAlertControllerStyle.Alert)
+      
+      let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(action) -> Void in
+        println("alertAction")
+      })
+    
+      alertController.addAction(alertAction)
+      
+      self.presentViewController(alertController, animated: true, completion: nil)
+    }
   }
 }
