@@ -37,7 +37,7 @@ class BasicViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    let barButtonItem = UIBarButtonItem(title: "Start", style: UIBarButtonItemStyle.Bordered, target: self, action: "startByValueAnimation")
+    let barButtonItem = UIBarButtonItem(title: "Start", style: UIBarButtonItemStyle.Bordered, target: self, action: "startTimingAnimation")
     
     navigationItem.rightBarButtonItem = barButtonItem
   }
@@ -58,6 +58,17 @@ class BasicViewController: UIViewController {
     let value = view.bounds.size.width - animationView.bounds.size.width
     animation.byValue = value
     animation.duration = 1
+    
+    animationView.layer.addAnimation(animation, forKey: "basic")
+  }
+  
+  func startTimingAnimation() {
+    let animation = CABasicAnimation()
+    animation.keyPath = "position.x"
+    let value = view.bounds.size.width - animationView.bounds.size.width
+    animation.byValue = value
+    animation.duration = 1
+    animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     
     animationView.layer.addAnimation(animation, forKey: "basic")
   }
